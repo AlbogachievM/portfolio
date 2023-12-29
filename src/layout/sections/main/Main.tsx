@@ -1,47 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import photo from '../../../assets/images/photo.jpeg'
+import logo from '../../../assets/images/logo.png'
+import React from 'react';
 import { Button } from '../../../components/Button';
-export const Main = () => {
+import { S } from './Main_Styles';
+
+export const Main: React.FC = () => {
     return (
-        <StyledMain>
-            <FlexWrapper justify='space-between'>
-                <div>
-                    <span>Hi There</span>
-                    <Name>I'm Magomed Albogachiev</Name>
-                    <Title>A Frontend Developer</Title>
-                    <Text>I'm a beginner front-end developer.</Text>
-                    <Button text={'Learn more'} />
-                    <Button text={'My contacts'}/>
-                </div>
-                <Photo src={photo} />
+        <S.Main>
+            <FlexWrapper justify='space-between' wrap='wrap-reverse' align='center' gap='20px'>
+                <S.Info>
+                    <S.SmallText>Hi There!</S.SmallText>
+                    <S.Name>I'm Magomed Albogachiev</S.Name>
+                    <S.Title>Front - End Developer</S.Title>
+                    <S.ButtonWrapper>
+                        <Button to='/Skills' text={'My skills'} />
+                        <Button to='/Contacts' text={'My contacts'} />
+                    </S.ButtonWrapper>
+                </S.Info>
+                    <S.Logo src={logo} alt="logo" />
             </FlexWrapper>
-        </StyledMain>
+        </S.Main>
     );
 };
-
-
-const StyledMain = styled.div`
-    
-`
-
-const Title = styled.h1`
-    font-size: 1.5em;
-`;
-
-const Name = styled.h2`
-    font-size: 1.5em;
-`;
-
-const Text = styled.p`
-    font-size: 1.5em;
-`;
-
-
-const Photo = styled.img`
-      width: 350px;
-    height: 430px;
-    object-fit: cover;
-
-`
