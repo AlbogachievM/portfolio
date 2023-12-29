@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.accent};
 }
 body {
-    min-width: 360px;
+    min-width: 320px;
   margin: 0;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

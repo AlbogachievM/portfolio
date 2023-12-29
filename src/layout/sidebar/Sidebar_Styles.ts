@@ -33,7 +33,8 @@ const SidebarLink = styled(NavLink)`
         opacity: 0;
     }
 `
-const SidebarItem = styled.li<{active?: boolean}>`
+const SidebarItem = styled.li`
+    position: relative;
     cursor: pointer;   
     margin-bottom: 20px;
     text-align: center;
@@ -44,20 +45,16 @@ const SidebarItem = styled.li<{active?: boolean}>`
     border: 1px dotted ${theme.colors.font};
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    transition: ease 0.3s;
+    transition: all 0.3s;
     
-    ${props => props.active && css<{active?: boolean}>`
-        background-color: ${theme.colors.accent};
-    `}
     &:hover{
         width: 150px;
-        font-size: 14px;
         background-color: ${theme.colors.accent};
         svg{
             fill: ${theme.colors.font};
             opacity: 1;
         }
-        ${SidebarLink}{  
+        ${SidebarLink}{
             font-size: 14px;
         }
     }

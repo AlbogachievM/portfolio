@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Icon } from '../../components/icon/Icon';
 import { MenuBurger } from '../../components/menu/Menu';
 import { S } from './Sidebar_Styles';
@@ -10,15 +9,14 @@ const items = [
     { title: 'My projects', href: '/Projects', icon: 'projects', viewBoxIcon: '0 0 72 72' },
     { title: 'Contacts', href: '/Contacts', icon: 'contact', viewBoxIcon: '0 0 62 62' },
 ]
-
+ 
 export const Sidebar: React.FC = () => {
-    const [onSidebarItem, setOnSidebarItem] = useState(false);
 
     return (
         <S.Sidebar>
             <MenuBurger />
             <S.SidebarList>
-                {items.map(({ title, href, icon, viewBoxIcon }, index) => <S.SidebarItem key={index} active={onSidebarItem} onClick={() => { setOnSidebarItem(onSidebarItem) }}> <S.SidebarLink to={href}>
+                {items.map(({ title, href, icon, viewBoxIcon }, index) => <S.SidebarItem key={index}> <S.SidebarLink to={href}>
                     <Icon iconId={icon} width='30px' height='30px' viewBox={viewBoxIcon || '0 0 100 100'} aria-hidden='true' />
                     <span>{title}</span></S.SidebarLink>
                 </S.SidebarItem>)}
