@@ -1,7 +1,6 @@
 import { Icon } from '../../components/icon/Icon';
 import { MenuBurger } from '../../components/menu/Menu';
 import { S } from './Sidebar_Styles';
-import { useState } from 'react';
 
 const items = [
     { title: 'Main', href: '/Main', icon: 'main' },

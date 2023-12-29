@@ -45,7 +45,7 @@ const SidebarItem = styled.li`
     border: 1px dotted ${theme.colors.font};
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    transition: all 0.3s;
+    transition: ease 0.2s;
     
     &:hover{
         width: 150px;
